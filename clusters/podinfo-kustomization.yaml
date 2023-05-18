@@ -6,9 +6,12 @@ metadata:
   namespace: flux-system
 spec:
   interval: 5m0s
-  path: ./
+  path: ./kustomize
   prune: true
   sourceRef:
     kind: GitRepository
-    name: test-capi
+    name: capi-test
   targetNamespace: default
+  patches:
+    - patch: |-
+            name: lab-from-kust
