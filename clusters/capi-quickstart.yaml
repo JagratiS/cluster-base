@@ -1,7 +1,7 @@
 apiVersion: cluster.x-k8s.io/v1beta1
 kind: Cluster
 metadata:
-  name: lab123
+  name: alliswell
   namespace: default
 spec:
   clusterNetwork:
@@ -30,7 +30,7 @@ spec:
         enabled: true
         enforce: baseline
         warn: restricted
-    version: v1.26.3
+    version: v1.27.1
     workers:
       machineDeployments:
       - class: default-worker
